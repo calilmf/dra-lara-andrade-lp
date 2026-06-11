@@ -514,69 +514,75 @@ p {
   position: relative;
   z-index: 2;
   align-self: end;
-  width: min(100%, 510px);
+  width: min(100%, 430px);
   margin-bottom: 28px;
-  padding: 28px 34px;
-  border: 1px solid rgba(230, 219, 184, 0.3);
+  padding: 20px 24px;
+  border: 1px solid rgba(111, 85, 71, 0.14);
   border-radius: 8px;
-  background: rgba(111, 85, 71, 0.88);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(247, 244, 241, 0.72)),
+    rgba(247, 244, 241, 0.82);
+  box-shadow: 0 20px 46px rgba(111, 85, 71, 0.14);
+  backdrop-filter: blur(16px);
 }
 
 .hero-card p {
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(93, 71, 60, 0.82);
 }
 
 .hero-card::before {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 74px;
-  height: 74px;
+  top: 16px;
+  right: 16px;
+  width: 58px;
+  height: 58px;
   content: "";
-  border: 1px solid rgba(230, 219, 184, 0.5);
+  border: 1px solid rgba(166, 138, 122, 0.32);
   border-radius: 50%;
-  box-shadow: -22px 26px 0 rgba(230, 219, 184, 0.12);
+  box-shadow: -18px 22px 0 rgba(230, 219, 184, 0.28);
+  opacity: 0.72;
 }
 
 .hero-doctor-card {
   display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: center;
+  text-align: center;
 }
 
 .hero-doctor-card > span {
-  font-family: var(--font-display);
-  font-size: 56px;
-  font-weight: 300;
-  line-height: 1;
-  color: #e6dbb8;
+  display: none;
 }
 
 .hero-doctor-card strong {
   display: block;
-  color: var(--white);
+  color: var(--ink);
   font-family: var(--font-display);
-  font-size: clamp(31px, 3vw, 42px);
+  font-size: clamp(27px, 2.35vw, 34px);
   font-weight: 600;
   line-height: 1;
 }
 
 .hero-doctor-card p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 15px;
+  color: rgba(93, 71, 60, 0.84);
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.18;
 }
 
 .hero-doctor-card small {
   display: block;
-  margin-top: 8px;
-  color: #e6dbb8;
-  font-size: 14px;
+  width: fit-content;
+  margin-top: 10px;
+  margin-inline: auto;
+  padding: 5px 9px;
+  border: 1px solid rgba(111, 85, 71, 0.16);
+  border-radius: 999px;
+  color: var(--green-deep);
+  background: rgba(230, 219, 184, 0.34);
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
