@@ -9,7 +9,8 @@
   --paper: #f7f4f1;
   --paper-2: #dcc9be;
   --white: #ffffff;
-  --muted: #8b766b;
+  --muted: #6f5547;
+  --muted-strong: #5d473c;
   --line: rgba(111, 85, 71, 0.16);
   --line-light: rgba(255, 255, 255, 0.18);
   --shadow: 0 24px 70px rgba(111, 85, 71, 0.16);
@@ -370,7 +371,7 @@ h1 {
   margin-bottom: 24px;
   font-family: var(--font-display);
   font-size: clamp(38px, 4.75vw, 66px);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -379,7 +380,7 @@ h2 {
   margin-bottom: 18px;
   font-family: var(--font-display);
   font-size: clamp(30px, 3.8vw, 52px);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.12;
   letter-spacing: 0;
 }
@@ -392,18 +393,18 @@ h3 {
 }
 
 p {
-  color: var(--muted);
+  color: var(--muted-strong);
   line-height: 1.68;
 }
 
 .section-dark p,
 .hero p,
 .final-cta p {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero p {
-  color: #6f5547;
+  color: #5d473c;
 }
 
 .hero-lead {
@@ -433,7 +434,7 @@ p {
 
 .microcopy {
   margin: 0;
-  color: rgba(111, 85, 71, 0.72);
+  color: rgba(93, 71, 60, 0.86);
   font-size: 13px;
   font-weight: 300;
 }
@@ -503,7 +504,7 @@ p {
 
 .doctor-id-card small {
   display: block;
-  color: rgba(111, 85, 71, 0.68);
+  color: rgba(93, 71, 60, 0.82);
   font-size: 11px;
   font-weight: 500;
   line-height: 1.25;
@@ -524,7 +525,7 @@ p {
 }
 
 .hero-card p {
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hero-card::before {
@@ -559,13 +560,13 @@ p {
   color: var(--white);
   font-family: var(--font-display);
   font-size: clamp(31px, 3vw, 42px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
 }
 
 .hero-doctor-card p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 15px;
   font-weight: 500;
   line-height: 1.18;
@@ -656,7 +657,7 @@ p {
 
 .proof-grid p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 14px;
 }
 
@@ -855,7 +856,7 @@ p {
 .treatment-note h3 {
   font-family: var(--font-display);
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.1;
 }
 
@@ -945,7 +946,7 @@ p {
 }
 
 .doctor-copy p {
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 17px;
 }
 
@@ -1103,7 +1104,7 @@ p {
 
 .footer p {
   margin: 6px 0 0;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 13px;
 }
 
