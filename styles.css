@@ -617,7 +617,8 @@ p {
 }
 
 .quick-proof {
-  padding: 24px 0;
+  overflow: visible;
+  padding: 28px 0;
   border-top: 1px solid rgba(230, 219, 184, 0.18);
   border-bottom: 1px solid rgba(230, 219, 184, 0.18);
   background: var(--green-deep);
@@ -627,7 +628,7 @@ p {
   display: grid;
   grid-template-columns: 1.05fr .85fr 1fr 1.1fr;
   gap: 10px;
-  overflow: hidden;
+  overflow: visible;
   border: 0;
   border-radius: 0;
   background: transparent;
