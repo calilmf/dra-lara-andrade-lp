@@ -62,9 +62,37 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "Intersect
   animatedItems.forEach((item) => revealObserver.observe(item));
 }
 
+function formatPhone(value) {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  const area = digits.slice(0, 2);
+  const firstPart = digits.length > 10 ? digits.slice(2, 7) : digits.slice(2, 6);
+  const secondPart = digits.length > 10 ? digits.slice(7, 11) : digits.slice(6, 10);
+
+  if (digits.length <= 2) return area ? `(${area}` : "";
+  if (!secondPart) return `(${area}) ${firstPart}`;
+  return `(${area}) ${firstPart}-${secondPart}`;
+}
+
+function syncPhoneValidity(input) {
+  const digits = input.value.replace(/\D/g, "");
+  input.setCustomValidity(digits.length === 10 || digits.length === 11 ? "" : "Digite um telefone com DDD.");
+}
+
+document.querySelectorAll("[data-mask='phone']").forEach((input) => {
+  input.addEventListener("input", () => {
+    input.value = formatPhone(input.value);
+    syncPhoneValidity(input);
+  });
+
+  input.addEventListener("blur", () => {
+    syncPhoneValidity(input);
+  });
+});
+
 document.querySelectorAll(".lead-form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    form.querySelectorAll("[data-mask='phone']").forEach(syncPhoneValidity);
     if (!form.reportValidity()) return;
 
     const data = new FormData(form);

@@ -302,21 +302,17 @@
             <p>Preencha seus dados para a equipe confirmar local, agenda, convênio e orientações para sua avaliação com a Dra. Lara Andrade.</p>
           </div>
           <form class="lead-form" data-phone="5500000000000" data-doctor="Dra. Lara Andrade" aria-label="Formulário de agendamento">
-            <div class="form-alert">
-              <span>Preencha aqui para contato</span>
-              <strong>A equipe retorna pelo WhatsApp.</strong>
-            </div>
             <label>
               <span>Nome</span>
-              <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required>
+              <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" minlength="3" required>
             </label>
             <label>
               <span>Telefone</span>
-              <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
+              <input type="tel" name="telefone" autocomplete="tel" inputmode="numeric" placeholder="(61) 99999-9999" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" title="Digite o telefone no formato (61) 99999-9999" data-mask="phone" required>
             </label>
             <button class="btn btn-primary" type="submit">
               <i data-lucide="send" aria-hidden="true"></i>
-              Solicitar retorno
+              Enviar pelo WhatsApp
             </button>
           </form>
         </div>
