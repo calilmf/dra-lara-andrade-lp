@@ -454,7 +454,7 @@ p {
 
 .hero-portrait {
   position: absolute;
-  top: 18px;
+  top: 2px;
   right: -6px;
   z-index: 1;
   width: min(98%, 540px);
@@ -524,7 +524,7 @@ p {
   justify-self: end;
   width: min(100%, 500px);
   margin-right: -12px;
-  margin-bottom: 39px;
+  margin-bottom: 55px;
   padding: 20px 24px;
   border: 1px solid rgba(111, 85, 71, 0.14);
   border-radius: 8px;
