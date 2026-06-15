@@ -99,7 +99,7 @@ a {
   height: 72px;
   object-fit: contain;
   object-position: center;
-  transform: translateX(2px);
+  transform: translateY(-2px);
 }
 
 .brand strong,
