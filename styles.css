@@ -1032,6 +1032,23 @@ p {
   color: var(--sage);
 }
 
+.section-bullets,
+.compact-list {
+  margin-top: 0;
+}
+
+.section-bullets li,
+.compact-list li {
+  color: var(--ink);
+  line-height: 1.42;
+}
+
+.section-bullets svg,
+.compact-list svg {
+  color: var(--green);
+  flex: 0 0 auto;
+}
+
 .location-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
