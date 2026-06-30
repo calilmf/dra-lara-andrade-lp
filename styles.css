@@ -1055,6 +1055,15 @@ p {
   font-size: 17px;
 }
 
+.doctor-copy .doctor-credentials {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--sage);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .check-list {
   display: grid;
   gap: 12px;
