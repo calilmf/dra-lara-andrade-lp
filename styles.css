@@ -446,7 +446,7 @@ p {
   position: relative;
   display: grid;
   align-items: end;
-  min-height: 610px;
+  min-height: 650px;
   overflow: visible;
 }
 
@@ -456,11 +456,11 @@ p {
 
 .hero-portrait {
   position: absolute;
-  top: 2px;
-  right: -6px;
+  top: -4px;
+  right: -10px;
   z-index: 1;
-  width: min(98%, 540px);
-  height: 445px;
+  width: min(100%, 560px);
+  height: 635px;
   overflow: hidden;
   background: transparent;
   pointer-events: none;
@@ -526,7 +526,7 @@ p {
   justify-self: end;
   width: min(100%, 500px);
   margin-right: -12px;
-  margin-bottom: 55px;
+  margin-bottom: 42px;
   padding: 20px 24px;
   border: 1px solid rgba(111, 85, 71, 0.14);
   border-radius: 8px;
