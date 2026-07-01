@@ -789,29 +789,13 @@ p {
 
 .chronic-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
-  gap: clamp(30px, 5vw, 78px);
-  align-items: center;
-}
-
-.chronic-media {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--white);
-  box-shadow: var(--shadow-soft);
-}
-
-.chronic-media img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: 58% 48%;
-  filter: saturate(0.96);
+  grid-template-columns: minmax(0, 820px);
+  justify-content: center;
+  align-items: start;
 }
 
 .chronic-copy .section-bullets {
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .problem {
@@ -838,23 +822,37 @@ p {
 
 .treatment-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
-  gap: 22px;
-  align-items: stretch;
-}
-
-.treatment-layout-full {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: start;
 }
 
 .treatment-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-.treatment-layout-full .treatment-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.treatment-media {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.treatment-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 58% 48%;
+  filter: saturate(0.96);
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.treatment-media:hover img {
+  filter: saturate(1);
+  transform: scale(1.03);
 }
 
 .treatment-list article,
@@ -1426,7 +1424,6 @@ p {
   .proof-grid,
   .concern-grid,
   .treatment-list,
-  .treatment-layout-full .treatment-list,
   .location-grid {
     grid-template-columns: 1fr;
   }
