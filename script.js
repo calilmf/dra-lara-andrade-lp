@@ -38,7 +38,7 @@ if (window.lucide) {
 }
 
 const animatedItems = document.querySelectorAll(
-  ".proof-grid article, .two-column, .concern-grid span, .treatment-media, .treatment-list article, .treatment-note, .process-steps article, .doctor-grid, .location-grid article, .faq-list details, .final-grid"
+  ".proof-media, .proof-grid article, .two-column, .concern-grid span, .treatment-list article, .treatment-note, .process-steps article, .doctor-grid, .location-grid article, .faq-list details, .final-grid"
 );
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
