@@ -471,14 +471,7 @@ p {
 }
 
 .hero-portrait::before {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  content: "";
-  background:
-    linear-gradient(180deg, rgba(247, 244, 241, 0.08), rgba(247, 244, 241, 0.2)),
-    linear-gradient(90deg, rgba(247, 244, 241, 0.18), transparent 38%, rgba(247, 244, 241, 0.08));
-  pointer-events: none;
+  display: none;
 }
 
 .hero-portrait img {
@@ -488,7 +481,7 @@ p {
   object-fit: cover;
   object-position: center 48%;
   background: #f1ece7;
-  filter: saturate(0.96) contrast(0.98) brightness(1.04);
+  filter: saturate(1.08) contrast(1.02) brightness(1.01);
 }
 
 .doctor-id-card {
@@ -1399,15 +1392,7 @@ p {
   }
 
   .hero-mobile-portrait::before {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: block;
-    content: "";
-    background:
-      linear-gradient(180deg, rgba(247, 244, 241, 0.08), rgba(247, 244, 241, 0.18)),
-      linear-gradient(90deg, rgba(247, 244, 241, 0.14), transparent 48%, rgba(247, 244, 241, 0.08));
-    pointer-events: none;
+    display: none;
   }
 
   .hero-mobile-portrait img {
@@ -1418,7 +1403,7 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: center 48%;
-    filter: saturate(0.96) contrast(0.98) brightness(1.04);
+    filter: saturate(1.08) contrast(1.02) brightness(1.01);
   }
 
   .hero-mobile-portrait .doctor-id-card {
