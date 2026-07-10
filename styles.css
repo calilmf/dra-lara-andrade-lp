@@ -325,14 +325,16 @@ main > section:not(.hero) > * {
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 510px);
+  grid-template-columns: minmax(0, 1fr) minmax(520px, 574px);
   gap: clamp(28px, 3.6vw, 52px);
-  align-items: center;
-  padding-block: clamp(42px, 5.8vw, 68px);
+  align-items: start;
+  width: min(1310px, calc(100% - 80px));
+  padding-block: 26px 0;
 }
 
 .hero-copy {
   max-width: 820px;
+  padding-top: clamp(88px, 11.7vh, 122px);
   text-shadow: none;
 }
 
@@ -374,7 +376,7 @@ h1 {
   max-width: 820px;
   margin-bottom: 24px;
   font-family: var(--font-display);
-  font-size: clamp(38px, 4.75vw, 66px);
+  font-size: clamp(38px, 4.75vw, 74px);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: 0;
@@ -413,10 +415,10 @@ p {
 
 .hero-lead {
   max-width: 690px;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
   font-size: clamp(18px, 1.9vw, 21px);
   font-weight: 300;
-  line-height: 1.62;
+  line-height: 1.72;
 }
 
 .hero-mobile-portrait {
@@ -451,7 +453,7 @@ p {
   position: relative;
   display: grid;
   align-items: end;
-  min-height: 700px;
+  min-height: 740px;
   overflow: visible;
 }
 
@@ -461,11 +463,11 @@ p {
 
 .hero-portrait {
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0;
   z-index: 1;
-  width: min(100%, 540px);
-  height: 660px;
+  width: min(100%, 574px);
+  height: 740px;
   overflow: hidden;
   border: 1px solid rgba(111, 85, 71, 0.14);
   border-radius: 8px;
@@ -536,10 +538,10 @@ p {
   z-index: 2;
   align-self: end;
   justify-self: end;
-  width: min(92%, 470px);
+  width: min(92%, 530px);
   margin-right: 18px;
-  margin-bottom: 58px;
-  padding: 20px 24px;
+  margin-bottom: 34px;
+  padding: 27px 24px;
   border: 1px solid rgba(111, 85, 71, 0.14);
   border-radius: 8px;
   background:
@@ -1291,6 +1293,14 @@ p {
   .final-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    width: min(1160px, calc(100% - 40px));
+  }
+
+  .hero-copy {
+    padding-top: 0;
   }
 
   .hero {
