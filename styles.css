@@ -423,6 +423,10 @@ p {
   display: none;
 }
 
+.mobile-hero-photo {
+  display: none;
+}
+
 .hero-mobile-portrait img {
   display: block;
   width: 100%;
@@ -479,9 +483,9 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center 26%;
   background: #f1ece7;
-  filter: saturate(1.08) contrast(1.02) brightness(1.01);
+  filter: saturate(1.14) contrast(1.04) brightness(1.03) sepia(0.04);
 }
 
 .doctor-id-card {
@@ -637,9 +641,9 @@ p {
 .quick-proof {
   position: relative;
   z-index: 4;
-  margin-top: -42px;
+  margin-top: -34px;
   overflow: visible;
-  padding: 0 0 clamp(44px, 5.4vw, 72px);
+  padding: 0 0 clamp(46px, 5.6vw, 76px);
   border: 0;
   background: transparent;
 }
@@ -690,32 +694,44 @@ p {
 
 .proof-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  overflow: hidden;
-  border: 1px solid rgba(111, 85, 71, 0.14);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  overflow: visible;
+  border: 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 22px 54px rgba(111, 85, 71, 0.14);
-  backdrop-filter: blur(14px);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .proof-grid article {
+  position: relative;
   display: grid;
-  grid-template-columns: 42px minmax(170px, 0.42fr) 1fr;
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-content: start;
   min-height: auto;
-  padding: 22px 28px;
-  border: 0;
-  border-bottom: 1px solid rgba(111, 85, 71, 0.1);
+  padding: 22px;
+  border: 1px solid rgba(111, 85, 71, 0.13);
+  border-bottom: 1px solid rgba(111, 85, 71, 0.13);
+  border-radius: 8px;
   color: var(--ink);
-  background: transparent;
-  transition: background 0.24s ease;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 244, 241, 0.88));
+  box-shadow: 0 18px 42px rgba(111, 85, 71, 0.1);
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
-.proof-grid article:last-child {
-  border-bottom: 0;
+.proof-grid article::before {
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 44px;
+  height: 3px;
+  content: "";
+  border-radius: 0 0 999px 999px;
+  background: var(--green-deep);
+  opacity: 0.72;
 }
 
 .proof-grid article > div {
@@ -723,24 +739,26 @@ p {
 }
 
 .proof-grid article:hover {
-  background: rgba(255, 255, 255, 0.54);
+  border-color: rgba(111, 85, 71, 0.22);
+  box-shadow: 0 22px 50px rgba(111, 85, 71, 0.13);
+  transform: translateY(-3px);
 }
 
 .proof-grid svg {
-  width: 42px;
-  height: 42px;
-  padding: 10px;
-  border: 1px solid rgba(166, 138, 122, 0.24);
-  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  border: 1px solid rgba(166, 138, 122, 0.2);
+  border-radius: 10px;
   color: var(--green-deep);
-  background: rgba(247, 244, 241, 0.84);
+  background: rgba(230, 219, 184, 0.22);
 }
 
 .proof-grid h3 {
   min-width: 0;
   margin: 0;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 1.2;
   overflow-wrap: break-word;
@@ -750,7 +768,7 @@ p {
   min-width: 0;
   margin: 0;
   color: var(--muted-strong);
-  font-size: 14px;
+  font-size: 13px;
   white-space: normal;
   overflow-wrap: break-word;
 }
@@ -1401,8 +1419,8 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 48%;
-    filter: saturate(1.08) contrast(1.02) brightness(1.01);
+    object-position: center 26%;
+    filter: saturate(1.14) contrast(1.04) brightness(1.03) sepia(0.04);
   }
 
   .hero-mobile-portrait .doctor-id-card {
@@ -1434,7 +1452,14 @@ p {
   }
 
   .quick-proof {
-    margin-top: -24px;
+    margin-top: -18px;
+    padding-bottom: 24px;
+  }
+
+  .mobile-hero-photo {
+    display: block;
+    padding-bottom: 42px;
+    background: var(--paper);
   }
 
   .hero-actions,
@@ -1453,18 +1478,19 @@ p {
   .proof-grid article,
   .proof-grid article:nth-child(2n),
   .proof-grid article:nth-last-child(-n + 2) {
-    grid-template-columns: 40px 1fr;
-    gap: 10px 14px;
+    grid-template-columns: 38px 1fr;
+    gap: 10px 13px;
     align-items: start;
     padding: 18px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(111, 85, 71, 0.1);
+    border: 1px solid rgba(111, 85, 71, 0.13);
+    border-radius: 8px;
   }
 
   .proof-grid p {
     grid-column: 1 / -1;
-    padding-left: 54px;
-    max-width: min(210px, calc(100vw - 128px));
+    padding-left: 0;
+    max-width: none;
+    overflow-wrap: anywhere;
   }
 
   .proof-grid h3 {
@@ -1472,7 +1498,7 @@ p {
   }
 
   .proof-grid article:last-child {
-    border-bottom: 0;
+    border-bottom: 1px solid rgba(111, 85, 71, 0.13);
   }
 
   .process-steps article {
