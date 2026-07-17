@@ -13,3 +13,6 @@
 !assets/lara-semfundo-hero.png
 !assets/logo-dra-lara-symbol.png
 !assets/logo-dra-lara-symbol-header.png
+
+.vercel
+.env*
