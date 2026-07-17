@@ -1408,9 +1408,9 @@ p {
   .hero-mobile-portrait {
     display: block;
     position: relative;
-    height: clamp(560px, 150vw, 660px);
+    height: clamp(420px, 112vw, 560px);
     width: 100%;
-    margin: 24px 0 -1px;
+    margin: 18px 0 0;
     overflow: hidden;
     border: 1px solid rgba(111, 85, 71, 0.14);
     border-radius: 8px 8px 0 0;
@@ -1462,13 +1462,15 @@ p {
   }
 
   .quick-proof {
-    margin-top: 18px;
-    padding-bottom: 24px;
+    margin-top: 0;
+    padding: 28px 0 28px;
+    background: var(--paper);
   }
 
   .mobile-hero-photo {
     display: block;
-    padding-bottom: 42px;
+    margin-top: -1px;
+    padding: 0 0 18px;
     background: var(--paper);
   }
 
