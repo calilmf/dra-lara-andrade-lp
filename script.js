@@ -37,6 +37,49 @@ if (window.lucide) {
   window.lucide.createIcons();
 }
 
+const scheduleModal = document.querySelector("#schedule-modal");
+const scheduleOpeners = Array.from(document.querySelectorAll("[data-schedule-open]"));
+const scheduleClosers = Array.from(document.querySelectorAll("[data-schedule-close]"));
+let lastScheduleTrigger = null;
+
+function openScheduleModal(event) {
+  event?.preventDefault();
+  if (!scheduleModal) return;
+
+  lastScheduleTrigger = event?.currentTarget ?? document.activeElement;
+  scheduleModal.classList.add("is-open");
+  scheduleModal.setAttribute("aria-hidden", "false");
+  scheduleModal.removeAttribute("inert");
+  document.body.classList.add("modal-open");
+  scheduleModal.querySelector(".schedule-options a")?.focus();
+}
+
+function closeScheduleModal() {
+  if (!scheduleModal) return;
+
+  scheduleModal.classList.remove("is-open");
+  scheduleModal.setAttribute("aria-hidden", "true");
+  scheduleModal.setAttribute("inert", "");
+  document.body.classList.remove("modal-open");
+
+  if (lastScheduleTrigger instanceof HTMLElement) {
+    lastScheduleTrigger.focus();
+  }
+}
+
+scheduleOpeners.forEach((opener) => opener.addEventListener("click", openScheduleModal));
+scheduleClosers.forEach((closer) => closer.addEventListener("click", closeScheduleModal));
+
+if (window.location.hash === "#agendar") {
+  window.requestAnimationFrame(() => openScheduleModal());
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && scheduleModal?.classList.contains("is-open")) {
+    closeScheduleModal();
+  }
+});
+
 const animatedItems = document.querySelectorAll(
   ".proof-media, .proof-grid article, .two-column, .concern-grid span, .treatment-list article, .treatment-note, .process-steps article, .doctor-grid, .location-grid article, .faq-list details, .final-grid"
 );
